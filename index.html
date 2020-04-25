@@ -17,7 +17,8 @@ function init() {
             zoom: 15
         });
 
-    var myPolygon = new ymaps.Polygon([
+    // Кушелевская дорога 3к2
+    myMap.geoObjects.add(new ymaps.Polygon([
         [
         [59.988679, 30.370419],
         [59.988445, 30.370750],
@@ -28,9 +29,35 @@ function init() {
         hintContent: "Многоугольник"
     }, {
         fillColor: '#00FF0088'
-    });
+    }));
 
-    myMap.geoObjects.add(myPolygon);
+    // Трансформаторная будка
+    myMap.geoObjects.add(new ymaps.Polygon([
+        [
+        [59.988083, 30.371512],
+        [59.987972, 30.371834],
+        [59.987802, 30.371597],
+        [59.987910, 30.371278]
+        ],
+    ], {
+        hintContent: "Многоугольник"
+    }, {
+        fillColor: '#00FF0088'
+    }));
+
+        // Трансформаторная будка
+        myMap.geoObjects.add(new ymaps.Polygon([
+        [
+        [59.987707, 30.368155],
+   [59.987785, 30.367971],
+    [59.987412, 30.367451],
+    [59.987437, 30.367215]
+        ],
+    ], {
+        hintContent: "Многоугольник"
+    }, {
+        fillColor: '#00FF0088'
+    }));
 }
 
 
@@ -64,7 +91,7 @@ function init() {
 </div>
 
 <div>
-    
+
 </div>
 
 <div id="map"></div>
