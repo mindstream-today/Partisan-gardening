@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=80a5128d-701f-475a-a5b3-e52efea61b26" type="text/javascript"></script>
+    <style>
+        html, body, #map {
+            width: 100%; height: 100%; padding: 0; margin: 0;
+        }
+    </style>
+    <script type="text/javascript">
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [59.987835, 30.368634],
+            zoom: 15
+        });
+
+    var myPolygon = new ymaps.Polygon([
+        [
+        [59.988679, 30.370419],
+        [59.988445, 30.370750],
+        [59.987639, 30.368330],
+        [59.987922, 30.368064]
+        ],
+    ], {
+        hintContent: "Многоугольник"
+    }, {
+        fillColor: '#00FF0088'
+    });
+
+    myMap.geoObjects.add(myPolygon);
+}
+
+
+    </script>
+    <title>Ударное благоустройство - Mindstream.Today</title>
 </head>
 <body>
+<h1>Привет! Тут ударное благоустройство. Это важно - среда формирует стиль мышления</h1>
 
+<div>
+    Наши группы
+    <ul>
+        <li><a href="https://www.youtube.com/channel/UC7jdBSqf-2JCFyyWB5MP26Q">Youtube</a></li>
+        <li><a href="https://vk.com/mindstreamtoday">VK</a></li>
+        <li><a href="https://t.me/mindstream_today">Telegram</a></li>
+        <li><a href="https://twitter.com/MStepachev">Twitter</a></li>
+        <li><a href="https://www.instagram.com/mindstreamtoday/">instagram</a></li>
+    </ul>
+</div>
+
+<div>
+    Планируемые и прошедшие встречи
+    <ul class="meetings">
+        <li class="next">next next</li>
+        <li><a href="https://vk.com/wall-191608625_157">21.04.20 - Запись встречи заинтересованной группы жильцов кушелевской дороги по вопросам благоустройства.</a></li>
+    </ul>
+</div>
+
+<div>
+    База знаний
+</div>
+
+<div>
+    
+</div>
+
+<div id="map"></div>
 </body>
 </html>
